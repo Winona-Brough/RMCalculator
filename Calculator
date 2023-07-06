@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rich Media Cost Calculator</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif; /* Set font-family to Segoe UI */
+    }
+    .calculator {
+      max-width: 400px;
+      margin: 20px auto 0; /* Add a 20px space between the title and the calculator */
+      padding: 40px;
+      background-color: #f5f5f5;
+      border-radius: 15px;
+      border: 1px solid #00D1B3; /* Set border color to HEX #00D1B3 */
+    }
+    h2 {
+      text-align: center; /* Center-align the title */
+      margin-top: 0; /* Reset margin-top */
+      margin-bottom: 30px; /* Add a 30px space below the header */
+      color: #3B0D4F; /* Set font color to HEX #3B0D4F */
+    }
+    .calculator label {
+      display: inline-block;
+      width: 180px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: bold; /* Set the input labels to bold */
+      text-align: right; /* Right-align the label headers */
+      margin-right: 10px; /* Add a 10px space to the right of the label */
+      color: #3B0D4F; /* Set font color to HEX #3B0D4F */
+    }
+    .calculator input[type="number"]::-webkit-inner-spin-button,
+    .calculator input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .calculator input[type="number"] {
+      -moz-appearance: textfield;
+      appearance: textfield;
+      width: calc(100% - 230px); /* Adjust the input field size */
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold; /* Set the input labels to bold */
+      border: 1px solid #00D1B3; /* Set border color to HEX #00D1B3 */
+      color: #00D1B3; /* Set font color to HEX #00D1B3 */
+      text-align: center; /* Center-align the input numbers */
+    }
+    .calculator button {
+      margin: 35px auto 0; /* Add 20px top margin, auto left and right margins to center-align the button */
+      display: block; /* Change the button display property to block */
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold; /* Set the label to bold */
+      background-color: #00D1B3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 2px solid #00D1B3; /* Set border color to HEX #00D1B3 */
+    }
+    .calculator .row {
+      margin-bottom: 20px; /* Add a 20px space between each row */
+    }
+    .calculator #result {
+      margin-top: 35px; /* Add a 20px space between the button and the result */
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center; /* Center-align the result */
+      color: #3B0D4F; /* Set font color to HEX #3B0D4F */
+    }
+    .calculator #result .label {
+      color: #3B0D4F; /* Set font color to HEX #3B0D4F for the label */
+    }
+    .calculator #result .value {
+      color: #00D1B3; /* Set font color to HEX #00D1B3 for the result value */
+    }
+  </style>
+  <script>
+    function calculate() {
+      var numberOfFormats = Math.max(0, parseInt(document.getElementById('numberOfFormats').value) || 0); // Set minimum value as 0
+      var numberOfVersions = Math.max(0, parseInt(document.getElementById('numberOfVersions').value) || 0); // Set minimum value as 0
+      var numberOfImpressions = Math.max(0, parseInt(document.getElementById('numberOfImpressions').value) || 0); // Set minimum value as 0
+
+      var result = ((numberOfFormats * numberOfVersions) * 680) + (numberOfImpressions / 1000 * 2);
+      result = result.toFixed(2); // Round the result to 2 decimal places
+      
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = '<span class="label">Total Production Cost = </span><span class="value">$' + result + '</span>'; // Display the rounded result with different font colors
+      
+      if (result === "0.00") {
+        resultElement.style.display = 'none'; // Hide the result element if the result is 0
+      } else {
+        resultElement.style.display = 'block'; // Show the result element if the result is not 0
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Rich Media Cost Calculator</h2>
+    <div class="row">
+      <label for="numberOfFormats">Number of Formats:</label>
+      <input type="number" id="numberOfFormats" inputmode="numeric">
+    </div>
+    <div class="row">
+      <label for="numberOfVersions">Number of Versions:</label>
+      <input type="number" id="numberOfVersions" inputmode="numeric">
+    </div>
+    <div class="row">
+      <label for="numberOfImpressions">Number of Impressions:</label>
+      <input type="number" id="numberOfImpressions" inputmode="numeric">
+    </div>
+    <button onclick="calculate()">Calculate</button>
+    <p id="result" style="display: none;"></p>
+  </div>
+</body>
+</html>
