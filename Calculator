@@ -28,7 +28,7 @@
       font-weight: bold; /* Set the input labels to bold */
       text-align: right; /* Right-align the label headers */
       margin-right: 10px; /* Add a 10px space to the right of the label */
-      color: #3B0D4F; /* Set font color to HEX #3B0D4F */
+      color: #3A008C; /* Set font color to HEX #3A008C */
     }
     .calculator input[type="number"]::-webkit-inner-spin-button,
     .calculator input[type="number"]::-webkit-outer-spin-button {
@@ -54,7 +54,7 @@
       font-size: 16px;
       font-weight: bold; /* Set the label to bold */
       background-color: #9FEA47;
-      color: white;
+      color: #3A008C;
       border: none;
       border-radius: 5px;
       cursor: pointer;
