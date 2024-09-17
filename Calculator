@@ -12,13 +12,13 @@
       padding: 40px;
       background-color: #f5f5f5;
       border-radius: 15px;
-      border: 1px solid #00D1B3; /* Set border color to HEX #00D1B3 */
+      border: 1px solid #9FEA47; /* Set border color to HEX #9FEA47 */
     }
     h2 {
       text-align: center; /* Center-align the title */
       margin-top: 0; /* Reset margin-top */
       margin-bottom: 30px; /* Add a 30px space below the header */
-      color: #3B0D4F; /* Set font color to HEX #3B0D4F */
+      color: #3A008C; /* Set font color to HEX #3A008C */
     }
     .calculator label {
       display: inline-block;
@@ -42,8 +42,8 @@
       padding: 10px;
       font-size: 16px;
       font-weight: bold; /* Set the input labels to bold */
-      border: 1px solid #00D1B3; /* Set border color to HEX #00D1B3 */
-      color: #00D1B3; /* Set font color to HEX #00D1B3 */
+      border: 1px solid #9FEA47; /* Set border color to HEX #9FEA47 */
+      color: #3A008C; /* Set font color to HEX #3A008C */
       text-align: center; /* Center-align the input numbers */
     }
     .calculator button {
@@ -53,12 +53,12 @@
       padding: 10px;
       font-size: 16px;
       font-weight: bold; /* Set the label to bold */
-      background-color: #00D1B3;
+      background-color: #9FEA47;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      border: 2px solid #00D1B3; /* Set border color to HEX #00D1B3 */
+      border: 2px solid #9FEA47; /* Set border color to HEX #9FEA47 */
     }
     .calculator .row {
       margin-bottom: 20px; /* Add a 20px space between each row */
@@ -68,13 +68,13 @@
       font-size: 18px;
       font-weight: bold;
       text-align: center; /* Center-align the result */
-      color: #3B0D4F; /* Set font color to HEX #3B0D4F */
+      color: #3A008C; /* Set font color to HEX #3A008C */
     }
     .calculator #result .label {
-      color: #3B0D4F; /* Set font color to HEX #3B0D4F for the label */
+      color: #3A008C; /* Set font color to HEX #3A008C for the label */
     }
     .calculator #result .value {
-      color: #00D1B3; /* Set font color to HEX #00D1B3 for the result value */
+      color: #9FEA47; /* Set font color to HEX #9FEA47 for the result value */
     }
   </style>
   <script>
